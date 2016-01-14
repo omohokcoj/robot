@@ -35,7 +35,7 @@ module RobotSimulator
       end
 
       it "shouldn't rotate if not placed" do
-        expect { robot.right }.to raise_error StandardError
+        expect { robot.right }.to raise_error PlacingError
       end
     end
 
@@ -55,7 +55,7 @@ module RobotSimulator
       end
 
       it "shouldn't move if not placed" do
-        expect { robot.move }.to raise_error StandardError
+        expect { robot.move }.to raise_error PlacingError
       end
     end
   end

@@ -45,7 +45,7 @@ module RobotSimulator
       if placed?
         yield
       else
-        fail PlacingError.new(self), 'You should place robot at first'
+        fail PlacingError, 'You should place robot at first'
       end
     end
 
