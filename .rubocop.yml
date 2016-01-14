@@ -1,0 +1,18 @@
+AllCops:
+  RunRailsCops: true
+  DisplayStyleGuide: true
+  DisplayCopNames: true
+  Include:
+    - '**/Gemfile'
+
+Metrics/LineLength:
+  Max: 110
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
