@@ -1,4 +1,4 @@
-require_relative '../spec_helper.rb'
+require 'spec_helper.rb'
 
 module RobotSimulator
   describe Robot do
@@ -20,8 +20,12 @@ module RobotSimulator
         expect(robot.report).to eq '3,4,EAST'
       end
 
-      it 'should throw exception when place robot into wrong position' do
-        expect { robot.place(3, 6, :south_west) }.to raise_error ArgumentError
+      it 'should throw exception when place robot into wrong coordinates' do
+        expect { robot.place(3, 6) }.to raise_error ArgumentError
+      end
+
+      it 'should throw exception when place robot into wrong direction' do
+        expect { robot.place(3, 5, :south_west) }.to raise_error ArgumentError
       end
     end
 

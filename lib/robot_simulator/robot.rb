@@ -1,4 +1,6 @@
 module RobotSimulator
+  PlacingError = Class.new(StandardError)
+
   class Robot
     MOVE_RULES = {
       north: [0, 1],
@@ -72,7 +74,7 @@ module RobotSimulator
       if valid_position?(position)
         @position = position
       else
-        fail ArgumentError, "(#{position.coordinates} coordinates are out of board"
+        fail ArgumentError, "#{position.coordinates} coordinates are out of board"
       end
     end
 
