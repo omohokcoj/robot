@@ -14,8 +14,8 @@ module RobotSimulator
     end
 
     def place(x = 0, y = 0, f = :north)
-      self.position  = Position.new(x, y)
-      self.direction = f
+      self.position  = Position.new(x.to_i, y.to_i)
+      self.direction = f.downcase.to_sym
     end
 
     def left
